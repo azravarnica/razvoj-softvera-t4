@@ -31,6 +31,16 @@ public class Artikal {
     private String sifra;
     private String naziv;
     private double cijena;
+     public Artikal() {
+
+     }
+     public Artikal (String ulaz) {
+         String[] ulazi= ulaz.split(regex ",");
+         setSifra(ulazi[0]);
+         setNaziv(ulazi[1]);
+         setCijena(Double.parseDouble(ulazi [2]));
+     }
+
     public String toString() {
         return sifra + ", " + naziv + ", " + cijena;
     }
